@@ -18,9 +18,9 @@ public class JpaPuzzler3Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        petRepository.findAll().forEach(pet -> {
+        petRepository.findById(1L).ifPresent(pet -> {
             System.out.println(pet);
-            System.out.println();
+            System.out.println(pet.getOwner());
         });
     }
 }

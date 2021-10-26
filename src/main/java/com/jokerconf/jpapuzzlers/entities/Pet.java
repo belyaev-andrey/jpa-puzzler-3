@@ -39,7 +39,6 @@ public class Pet {
     public String toString() {
         return getClass().getSimpleName() + "(" +
                 "id = " + id + ", " +
-                "name = " + name + ", " +
-                "collar = " + collar + ")";
+                "name = " + name  + ")";
     }
 }

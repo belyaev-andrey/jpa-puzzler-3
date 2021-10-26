@@ -5,10 +5,12 @@ import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PetRepository extends JpaRepository<Pet, Long> {
 
-    @Override
-    List<Pet> findAll();
 
+    @Override
+    @EntityGraph("pet-with-owner")
+    Optional<Pet> findById(Long aLong);
 }
