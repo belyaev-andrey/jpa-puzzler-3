@@ -21,6 +21,7 @@ public class JpaPuzzler3Application implements CommandLineRunner {
         petRepository.findById(1L).ifPresent(pet -> {
             System.out.println(pet);
             System.out.println(pet.getOwner());
+            System.out.println(pet.getCollar());
         });
     }
 }
